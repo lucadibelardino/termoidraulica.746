@@ -1,18 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Booking from './pages/Booking';
+import Quote from './pages/Quote';
+import Contact from './pages/Contact';
 
-// Placeholder Pages
-const Home = () => <div className="pt-20">Home Page</div>;
-const Services = () => <div className="pt-20">Services Page</div>;
-const Booking = () => <div className="pt-20">Booking Page</div>;
-const Quote = () => <div className="pt-20">Quote Page</div>;
-const Contact = () => <div className="pt-20">Contact Page</div>;
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-slate-50">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow">
           <Routes>
