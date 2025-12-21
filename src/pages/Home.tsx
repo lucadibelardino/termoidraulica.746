@@ -22,7 +22,7 @@ const Home = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: "outCirc" }}
+                            transition={{ duration: 0.8, ease: "circOut" }}
                             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight drop-shadow-2xl"
                         >
                             Il tuo Idraulico di <span className="text-secondary">Fiducia</span>
@@ -30,7 +30,7 @@ const Home = () => {
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2, ease: "outCirc" }}
+                            transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
                             className="text-xl md:text-2xl text-slate-100 mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-medium"
                         >
                             Interventi rapidi, professionalità certificata e soluzioni su misura per il tuo comfort domestico. Servizio H24 per emergenze.
@@ -38,7 +38,7 @@ const Home = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4, ease: "outCirc" }}
+                            transition={{ duration: 0.8, delay: 0.4, ease: "circOut" }}
                             className="flex flex-col sm:flex-row items-center justify-center gap-6"
                         >
                             <Link to="/prenota" className="w-full sm:w-auto px-10 py-5 bg-secondary text-white rounded-2xl font-bold text-xl hover:bg-secondary/90 transition-all shadow-xl shadow-secondary/30 flex items-center justify-center gap-3 transform hover:-translate-y-1">
