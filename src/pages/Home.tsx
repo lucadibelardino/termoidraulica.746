@@ -13,42 +13,62 @@ const Home = () => {
             <section className="relative min-h-screen flex items-center justify-center bg-slate-900 border-b border-slate-800">
                 <div className="absolute inset-0 z-0 overflow-hidden">
                     <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
-                    {/* Overlay removed as requested */}
+                    {/* Subtle gradient from bottom to improve text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 </div>
 
-                <div className="container mx-auto px-4 z-10 relative">
-                    <div className="max-w-3xl mx-auto text-center">
+                <div className="container mx-auto px-4 z-10 relative mt-20">
+                    <div className="max-w-4xl mx-auto text-center">
                         <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+                            transition={{ duration: 0.8, ease: "outCirc" }}
+                            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight drop-shadow-2xl"
                         >
                             Il tuo Idraulico di <span className="text-secondary">Fiducia</span>
                         </motion.h1>
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed"
+                            transition={{ duration: 0.8, delay: 0.2, ease: "outCirc" }}
+                            className="text-xl md:text-2xl text-slate-100 mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-medium"
                         >
                             Interventi rapidi, professionalità certificata e soluzioni su misura per il tuo comfort domestico. Servizio H24 per emergenze.
                         </motion.p>
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                            transition={{ duration: 0.8, delay: 0.4, ease: "outCirc" }}
+                            className="flex flex-col sm:flex-row items-center justify-center gap-6"
                         >
-                            <Link to="/prenota" className="w-full sm:w-auto px-8 py-4 bg-secondary text-white rounded-xl font-bold text-lg hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/25 flex items-center justify-center gap-2">
-                                Prenota Ora <ArrowRight className="w-5 h-5" />
+                            <Link to="/prenota" className="w-full sm:w-auto px-10 py-5 bg-secondary text-white rounded-2xl font-bold text-xl hover:bg-secondary/90 transition-all shadow-xl shadow-secondary/30 flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                                Prenota Ora <ArrowRight className="w-6 h-6" />
                             </Link>
-                            <Link to="/preventivo" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20">
+                            <Link to="/preventivo" className="w-full sm:w-auto px-10 py-5 bg-white/10 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all backdrop-blur-md border border-white/30 transform hover:-translate-y-1">
                                 Richiedi Preventivo
                             </Link>
                         </motion.div>
                     </div>
                 </div>
+
+                {/* Scroll Indicator */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, y: [0, 10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
+                >
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-sm font-medium uppercase tracking-widest text-white/80">Scorri</span>
+                        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
+                            <motion.div
+                                animate={{ y: [0, 12, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity }}
+                                className="w-1.5 h-1.5 bg-white rounded-full"
+                            />
+                        </div>
+                    </div>
+                </motion.div>
             </section>
 
             {/* Benefits Section */}
