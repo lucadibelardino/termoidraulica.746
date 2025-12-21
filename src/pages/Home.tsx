@@ -72,7 +72,7 @@ const Home = () => {
             </section>
 
             {/* Benefits Section */}
-            <section className="py-20 bg-white">
+            <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <BenefitCard
@@ -95,9 +95,9 @@ const Home = () => {
             </section>
 
             {/* Services Preview */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-12 md:py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-10 md:mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">I Nostri Servizi</h2>
                         <p className="text-slate-600 max-w-2xl mx-auto">Offriamo una gamma completa di servizi termo-idraulici per privati e aziende.</p>
                     </div>
@@ -129,9 +129,9 @@ const Home = () => {
             </section>
 
             {/* Values Section */}
-            <section className="py-24 bg-white relative">
+            <section className="py-16 md:py-24 bg-white relative">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -154,7 +154,7 @@ const Home = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="bg-slate-50 p-10 rounded-3xl border border-slate-100"
+                            className="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100"
                         >
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-accent">
@@ -174,7 +174,7 @@ const Home = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-primary text-white relative overflow-hidden">
+            <section className="py-16 md:py-24 bg-primary text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-slate-900 z-0" />
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Hai un'emergenza o serve un preventivo?</h2>
