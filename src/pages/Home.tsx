@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Wrench, Clock, ShieldCheck, Phone } from 'lucide-react';
+import { ArrowRight, CheckCircle, Wrench, Clock, ShieldCheck, Phone, Award, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heatingImg from '../assets/heating.png';
 import plumbingImg from '../assets/plumbing.png';
@@ -104,6 +104,51 @@ const Home = () => {
                         <Link to="/servizi" className="inline-flex items-center gap-2 text-secondary font-bold hover:underline">
                             Scopri tutti i servizi <ArrowRight className="w-4 h-4" />
                         </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Values Section */}
+            <section className="py-24 bg-white relative">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-secondary">
+                                    <Award className="w-8 h-8" />
+                                </div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Qualità e Affidabilità</h2>
+                            </div>
+                            <p className="text-lg text-slate-600 leading-relaxed">
+                                Offriamo soluzioni impiantistiche di alta qualità, progettate per soddisfare le esigenze specifiche dei nostri clienti. La nostra esperienza garantisce affidabilità e professionalità in ogni progetto.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="bg-slate-50 p-10 rounded-3xl border border-slate-100"
+                        >
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-accent">
+                                    <Heart className="w-8 h-8" />
+                                </div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Passione e Professionalità</h2>
+                            </div>
+                            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                                La dedizione di <span className="font-bold text-slate-900">Giorgio Piras</span> e del suo team assicura un servizio che unisce competenza tecnica e attenzione ai dettagli.
+                            </p>
+                            <Link to="/contatti" className="inline-flex items-center gap-2 text-secondary font-bold hover:underline">
+                                Parla con noi <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </motion.div>
                     </div>
                 </div>
             </section>
