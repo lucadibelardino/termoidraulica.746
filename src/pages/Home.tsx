@@ -10,10 +10,10 @@ const Home = () => {
     return (
         <div className="w-full overflow-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center justify-center bg-slate-900 border-b border-slate-800">
+            <section className="relative min-h-screen flex items-center justify-center bg-slate-900 border-b border-slate-800">
                 <div className="absolute inset-0 z-0 overflow-hidden">
-                    <img src={heroBg} alt="Background" className="w-full h-full object-cover opacity-40" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/50 to-slate-900/90" />
+                    <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
+                    {/* Overlay removed as requested */}
                 </div>
 
                 <div className="container mx-auto px-4 z-10 relative">
