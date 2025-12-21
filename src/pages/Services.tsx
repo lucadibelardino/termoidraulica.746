@@ -29,12 +29,12 @@ const Services = () => {
 
     return (
         <div className="pt-20">
-            <div className="bg-slate-900 py-20 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">I Nostri Servizi</h1>
+            <div className="bg-slate-900 py-12 md:py-20 text-center">
+                <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">I Nostri Servizi</h1>
                 <p className="text-slate-300 text-lg max-w-2xl mx-auto px-4">Qualità, innovazione e risparmio energetico per la tua casa.</p>
             </div>
 
-            <div className="container mx-auto px-4 py-20 space-y-20">
+            <div className="container mx-auto px-4 py-12 md:py-20 space-y-16 md:space-y-20">
                 {serviceList.map((service, idx) => (
                     <div key={idx} className={`flex flex-col md:flex-row gap-12 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                         <div className="w-full md:w-1/2">
