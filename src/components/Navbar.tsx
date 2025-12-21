@@ -10,19 +10,24 @@ const Navbar = () => {
     const { scrollY } = useScroll();
     const location = useLocation();
 
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest < 50) {
-            setHidden(true); // At top: hide
-        } else {
-            setHidden(false); // Scrolled down: show
-        }
-    });
-
     // Also check on mount
     useEffect(() => {
-        if (window.scrollY < 50) setHidden(true);
-        else setHidden(false);
-    }, []);
+        const isHome = location.pathname === '/';
+        if (isHome && window.scrollY < 50) {
+            setHidden(true);
+        } else {
+            setHidden(false);
+        }
+    }, [location.pathname]);
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const isHome = location.pathname === '/';
+        if (isHome && latest < 50) {
+            setHidden(true); // At top: hide (only home)
+        } else {
+            setHidden(false); // Scrolled down or other page: show
+        }
+    });
 
     const navLinks = [
         { name: 'Home', path: '/' },
