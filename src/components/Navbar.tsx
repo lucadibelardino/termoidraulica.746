@@ -10,22 +10,31 @@ const Navbar = () => {
     const { scrollY } = useScroll();
     const location = useLocation();
 
-    // Also check on mount
+    // Also check on mount and route change
     useEffect(() => {
-        const isHome = location.pathname === '/';
-        if (!isHome && window.scrollY < 50) {
-            setHidden(true);
+        const isHome = location.pathname === '/' || location.pathname.endsWith('/termoidraulica.746/');
+
+        if (isHome) {
+            setHidden(false); // Always show on home
         } else {
-            setHidden(false);
+            // On other pages, obey scroll position
+            if (window.scrollY < 50) setHidden(true);
+            else setHidden(false);
         }
     }, [location.pathname]);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const isHome = location.pathname === '/';
-        if (!isHome && latest < 50) {
-            setHidden(true); // At top: hide (only if NOT home)
+        const isHome = location.pathname === '/' || location.pathname.endsWith('/termoidraulica.746/');
+
+        if (isHome) {
+            setHidden(false);
+            return; // Exit early, never hide on home
+        }
+
+        if (latest < 50) {
+            setHidden(true); // At top: hide
         } else {
-            setHidden(false); // Scrolled down or Home: show
+            setHidden(false); // Scrolled down: show
         }
     });
 
