@@ -12,8 +12,7 @@ const Navbar = () => {
 
     // Also check on mount
     useEffect(() => {
-        const isHome = location.pathname === '/';
-        if (isHome && window.scrollY < 50) {
+        if (window.scrollY < 50) {
             setHidden(true);
         } else {
             setHidden(false);
@@ -21,11 +20,10 @@ const Navbar = () => {
     }, [location.pathname]);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const isHome = location.pathname === '/';
-        if (isHome && latest < 50) {
-            setHidden(true); // At top: hide (only home)
+        if (latest < 50) {
+            setHidden(true); // At top: hide
         } else {
-            setHidden(false); // Scrolled down or other page: show
+            setHidden(false); // Scrolled down: show
         }
     });
 
