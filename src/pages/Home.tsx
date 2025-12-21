@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import heatingImg from '../assets/heating.png';
 import plumbingImg from '../assets/plumbing.png';
 import bathroomImg from '../assets/bathroom.png';
+import heroBg from '../assets/hero-bg.png';
 
 const Home = () => {
     return (
@@ -11,9 +12,8 @@ const Home = () => {
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center justify-center bg-slate-900 border-b border-slate-800">
                 <div className="absolute inset-0 z-0 overflow-hidden">
-                    {/* Abstract background elements could go here */}
-                    <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-secondary/10 blur-[120px] rounded-full" />
-                    <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/10 blur-[100px] rounded-full" />
+                    <img src={heroBg} alt="Background" className="w-full h-full object-cover opacity-40" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/50 to-slate-900/90" />
                 </div>
 
                 <div className="container mx-auto px-4 z-10 relative">
