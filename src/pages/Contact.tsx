@@ -28,7 +28,7 @@ const Contact = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Email</h3>
                             <p className="text-slate-500 mb-4">Per preventivi e informazioni:</p>
-                            <a href="mailto:info@termoidraulica.it" className="text-lg font-bold text-secondary hover:underline">info@termoidraulica.it</a>
+                            <a href="mailto:info@termoidraulica.it?subject=Richiesta%20Informazioni" className="text-lg font-bold text-secondary hover:underline">info@termoidraulica.it</a>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
