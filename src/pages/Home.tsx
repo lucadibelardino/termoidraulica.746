@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Wrench, Clock, ShieldCheck, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heatingImg from '../assets/heating.png';
+import plumbingImg from '../assets/plumbing.png';
+import bathroomImg from '../assets/bathroom.png';
 
 const Home = () => {
     return (
@@ -83,17 +86,17 @@ const Home = () => {
                         <ServiceCard
                             title="Impianti Termici"
                             items={['Installazione caldaie', 'Manutenzione ordinaria', 'Analisi fumi', 'Pompe di calore']}
-                            image="https://images.unsplash.com/photo-1581094794320-c91775fa0ca2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            image={heatingImg}
                         />
                         <ServiceCard
                             title="Idraulica Generale"
                             items={['Riparazione perdite', 'Sostituzione rubinetteria', 'Disotturazione scarichi', 'Allacciamenti cucina']}
-                            image="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            image={plumbingImg}
                         />
                         <ServiceCard
                             title="Ristrutturazione Bagno"
                             items={['Progettazione', 'Posa sanitari', 'Box doccia', 'Impianti idrici']}
-                            image="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            image={bathroomImg}
                         />
                     </div>
 

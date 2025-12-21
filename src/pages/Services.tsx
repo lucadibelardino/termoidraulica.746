@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { Wrench, Check, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heatingImg from '../assets/heating.png';
+import coolingImg from '../assets/cooling.png';
+import bathroomImg from '../assets/bathroom.png';
 
 const Services = () => {
     const serviceList = [
@@ -8,19 +11,19 @@ const Services = () => {
             title: "Riscaldamento",
             desc: "Dall'installazione di nuove caldaie a condensazione alla manutenzione ordinaria. Garantiamo efficienza energetica e sicurezza.",
             features: ["Installazione Caldaie", "Lavaggio Impianti", "Pompe di Calore", "Analisi Fumi", "Valvole Termostatiche"],
-            img: "https://images.unsplash.com/photo-1585918641322-83491f2c922a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            img: heatingImg
         },
         {
             title: "Climatizzazione",
             desc: "Soluzioni per il raffrescamento estivo con installazione di climatizzatori monosplit, multisplit e canalizzati delle migliori marche.",
             features: ["Installazione Climatizzatori", "Ricarica Gas", "Sanificazione Filtri", "Manutenzione", "Assistenza Guasti"],
-            img: "https://images.unsplash.com/photo-1618038760636-2244243eb3d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            img: coolingImg
         },
         {
             title: "Idraulica & Bagno",
             desc: "Interventi idraulici completi, dalla piccola riparazione alla ristrutturazione chiavi in mano del tuo bagno.",
             features: ["Rifacimento Bagni", "Sostituzione Sanitari", "Box Doccia", "Rubinetteria", "Ricerca Perdite"],
-            img: "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            img: bathroomImg
         }
     ];
 
