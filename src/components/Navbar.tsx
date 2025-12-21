@@ -1,12 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ThermometerSun } from 'lucide-react';
 import { cn } from '../lib/utils';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [hidden, setHidden] = useState(true); // Default hidden at top
+    const { scrollY } = useScroll();
     const location = useLocation();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious() || 0;
+        if (latest < 50) {
+            setHidden(true); // At top: hide
+        } else {
+            setHidden(false); // Scrolled down: show
+        }
+    });
+
+    // Also check on mount
+    useEffect(() => {
+        if (window.scrollY < 50) setHidden(true);
+        else setHidden(false);
+    }, []);
 
     const navLinks = [
         { name: 'Home', path: '/' },
@@ -17,7 +34,15 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <motion.nav
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: -100 },
+            }}
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="fixed top-0 left-0 right-0 z-50 glass-nav"
+        >
             <div className="container mx-auto px-4 h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 text-primary font-bold text-2xl">
@@ -91,7 +116,7 @@ const Navbar = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </motion.nav>
     );
 };
 
