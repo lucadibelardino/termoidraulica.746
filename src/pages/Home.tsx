@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className="w-full overflow-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center bg-slate-900 border-b border-slate-800">
+            <section className="relative min-h-screen flex items-center justify-center bg-slate-900 border-b border-slate-800 pb-32">
                 <div className="absolute inset-0 z-0 overflow-hidden">
                     <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
                     {/* Subtle gradient from bottom to improve text readability */}
@@ -51,29 +51,12 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, y: [0, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
-                >
-                    <div className="flex flex-col items-center gap-2">
-                        <span className="text-sm font-medium uppercase tracking-widest text-white/80">Scorri</span>
-                        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-                            <motion.div
-                                animate={{ y: [0, 12, 0] }}
-                                transition={{ duration: 1.5, repeat: Infinity }}
-                                className="w-1.5 h-1.5 bg-white rounded-full"
-                            />
-                        </div>
-                    </div>
-                </motion.div>
+
             </section>
 
             {/* Benefits Section */}
-            <section className="py-12 md:py-20 bg-white">
-                <div className="container mx-auto px-4">
+            <section className="py-12 md:py-20 bg-white relative z-20">
+                <div className="container mx-auto px-4 -mt-32 md:-mt-48">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <BenefitCard
                             icon={<Clock className="w-10 h-10 text-secondary" />}
