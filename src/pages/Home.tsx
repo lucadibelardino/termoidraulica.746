@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import heatingImg from '../assets/heating.png';
 import plumbingImg from '../assets/plumbing.png';
 import bathroomImg from '../assets/bathroom.png';
-import heroBg from '../assets/hero-bg.png';
+import heroBg from '../assets/hero-bg-new.jpg';
 
 const Home = () => {
     return (
