@@ -11,7 +11,6 @@ const Navbar = () => {
     const location = useLocation();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = scrollY.getPrevious() || 0;
         if (latest < 50) {
             setHidden(true); // At top: hide
         } else {
