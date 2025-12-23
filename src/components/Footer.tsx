@@ -30,7 +30,6 @@ const Footer = () => {
                     <ul className="flex flex-col gap-4">
                         <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                         <li><Link to="/servizi" className="hover:text-white transition-colors">I Nostri Servizi</Link></li>
-                        <li><Link to="/prenota" className="hover:text-white transition-colors">Prenota Appuntamento</Link></li>
                         <li><Link to="/preventivo" className="hover:text-white transition-colors">Richiedi Preventivo</Link></li>
                         <li><Link to="/contatti" className="hover:text-white transition-colors">Contattaci</Link></li>
                     </ul>

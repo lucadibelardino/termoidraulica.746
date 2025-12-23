@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Booking from './pages/Booking';
+
 import Quote from './pages/Quote';
 import Contact from './pages/Contact';
 
@@ -27,7 +27,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/servizi" element={<Services />} />
-            <Route path="/prenota" element={<Booking />} />
             <Route path="/preventivo" element={<Quote />} />
             <Route path="/contatti" element={<Contact />} />
           </Routes>
