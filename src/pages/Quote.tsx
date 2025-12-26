@@ -6,6 +6,17 @@ import { Link } from 'react-router-dom';
 
 type Step = 'category' | 'details' | 'contact' | 'success';
 
+const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfcXyBYP9S2Vj8NOpy3BZi8EhNCDb6oY9KPtzlyGjIqRmh8XA/formResponse';
+
+const FIELD_IDS = {
+    category: 'entry.700896625',
+    description: 'entry.864693341',
+    fullName: 'entry.235223577',
+    email: 'entry.287687410',
+    phone: 'entry.738990307',
+    location: 'entry.1758535097',
+};
+
 const categories = [
     { id: 'heating', label: 'Riscaldamento', icon: <Wrench className="w-8 h-8" />, desc: 'Caldaie, Termosifoni, Pompe di calore' },
     { id: 'cooling', label: 'Climatizzazione', icon: <Snowflake className="w-8 h-8" />, desc: 'Condizionatori, Split, Manutenzione' },
@@ -20,13 +31,40 @@ const Quote = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onDetailsSubmit = () => setStep('contact');
+
     const onContactSubmit = async (data: any) => {
         setIsSubmitting(true);
-        // Simulate network request
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        console.log({ category, ...data });
-        setIsSubmitting(false);
-        setStep('success');
+
+        try {
+            const formData = new FormData();
+
+            // Map fields to Google Form IDs
+            const selectedCategoryLabel = categories.find(c => c.id === category)?.label || category || '';
+
+            if (FIELD_IDS.category) formData.append(FIELD_IDS.category, selectedCategoryLabel);
+            if (FIELD_IDS.description) formData.append(FIELD_IDS.description, data.description);
+            if (FIELD_IDS.fullName) formData.append(FIELD_IDS.fullName, data.fullName);
+            if (FIELD_IDS.email) formData.append(FIELD_IDS.email, data.email);
+            if (FIELD_IDS.phone) formData.append(FIELD_IDS.phone, data.phone);
+            if (FIELD_IDS.location) formData.append(FIELD_IDS.location, data.location);
+
+            // Submit to Google Forms
+            await fetch(GOOGLE_FORM_ACTION_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Important for Google Forms
+                body: formData
+            });
+
+            // Minimum delay for better UX
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            setStep('success');
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Si è verificato un errore nell\'invio della richiesta. Riprova più tardi o contattaci telefonicamente.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
