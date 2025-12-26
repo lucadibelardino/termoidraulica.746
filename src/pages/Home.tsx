@@ -33,7 +33,7 @@ const Home = () => {
                             transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
                             className="text-xl md:text-2xl text-slate-100 mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-medium"
                         >
-                            Interventi rapidi, professionalità certificata e soluzioni su misura per il tuo comfort domestico. Servizio H24 per emergenze.
+                            Interventi rapidi, professionalità certificata e soluzioni su misura per il tuo comfort domestico.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -60,8 +60,8 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <BenefitCard
                             icon={<Clock className="w-10 h-10 text-secondary" />}
-                            title="Pronto Intervento H24"
-                            description="Siamo operativi 24 ore su 24, 7 giorni su 7, per risolvere guasti urgenti e malfunzionamenti improvvisi."
+                            title="Interventi Rapidi"
+                            description="Siamo operativi per risolvere guasti e malfunzionamenti nel minor tempo possibile."
                         />
                         <BenefitCard
                             icon={<ShieldCheck className="w-10 h-10 text-secondary" />}
