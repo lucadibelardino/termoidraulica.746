@@ -53,7 +53,7 @@ const Contact = () => {
                         </div>
                     </motion.div>
 
-                    {/* Email / Quote Card */}
+                    {/* Email Card */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -63,19 +63,22 @@ const Contact = () => {
                         <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-slate-600">
                             <Mail className="w-8 h-8" />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Preventivi Online</h3>
-                        <p className="text-slate-500 mb-8">Vuoi una stima dettagliata senza impegno? Compila il nostro modulo guidato.</p>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Email</h3>
+                        <p className="text-slate-500 mb-8">Preferisci scriverci? Inviaci una mail direttamente dal tuo client preferito.</p>
 
-                        <Link
-                            to="/preventivo"
+                        <a
+                            href="mailto:info@termoidraulica.it"
                             className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"
                         >
-                            Richiedi Preventivo <ArrowRight className="w-4 h-4" />
-                        </Link>
-
-                        <a href="mailto:info@termoidraulica.it" className="mt-6 text-slate-500 hover:text-secondary font-medium transition-colors">
-                            o scrivici a info@termoidraulica.it
+                            <Mail className="w-5 h-5" /> Invia Email
                         </a>
+
+                        <div className="mt-6 pt-6 border-t border-slate-100 w-full">
+                            <p className="text-sm text-slate-500 mb-2">Oppure usa il nostro wizard:</p>
+                            <Link to="/preventivo" className="text-secondary font-bold hover:underline flex items-center justify-center gap-1">
+                                Richiedi Preventivo Online <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
                     </motion.div>
 
                     {/* Info & Hours Card */}
