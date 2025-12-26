@@ -1,82 +1,113 @@
-import { Phone, Mail, Clock, Send } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
         <div className="pt-20 min-h-screen bg-slate-50">
-            <div className="bg-slate-900 py-20 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contattaci</h1>
-                <p className="text-slate-300 text-lg max-w-2xl mx-auto px-4">Siamo qui per rispondere a ogni tua domanda o emergenza.</p>
+            {/* Hero Section */}
+            <div className="bg-slate-900 py-24 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581094794329-cd67b9355999?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=20')] opacity-10 bg-cover bg-center" />
+                <div className="container mx-auto px-4 relative z-10">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-4xl md:text-6xl font-bold text-white mb-6"
+                    >
+                        Parliamo del tuo Progetto
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto"
+                    >
+                        Siamo a tua disposizione per emergenze, preventivi o semplici consigli. Scegli il modo che preferisci per contattarci.
+                    </motion.p>
+                </div>
             </div>
 
-            <div className="container mx-auto px-4 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="container mx-auto px-4 py-16 -mt-10 relative z-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    {/* Info Cards */}
-                    <div className="space-y-6">
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                            <div className="bg-secondary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                                <Phone className="w-6 h-6 text-secondary" />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Telefono</h3>
-                            <p className="text-slate-500 mb-4">Per urgenze e appuntamenti:</p>
-                            <a href="tel:+391234567890" className="text-xl font-bold text-secondary hover:underline">+39 123 456 7890</a>
+                    {/* Emergency / Phone Card */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-secondary text-white p-8 rounded-3xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center relative overflow-hidden group"
+                    >
+                        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <Phone className="w-32 h-32" />
                         </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                            <div className="bg-secondary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                                <Mail className="w-6 h-6 text-secondary" />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Email</h3>
-                            <p className="text-slate-500 mb-4">Per preventivi e informazioni:</p>
-                            <a
-                                href="mailto:info@termoidraulica.it"
-                                className="text-lg font-bold text-secondary hover:underline"
-                            >
-                                info@termoidraulica.it
-                            </a>
+                        <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 backdrop-blur-sm">
+                            <Phone className="w-8 h-8 text-white" />
                         </div>
+                        <h3 className="text-2xl font-bold mb-2">Urgenze & Telefono</h3>
+                        <p className="text-white/80 mb-6">La via più veloce per parlare con noi. Disponibili per pronto intervento.</p>
+                        <a href="tel:+391234567890" className="text-3xl font-bold hover:scale-105 transition-transform inline-block">
+                            +39 123 456 7890
+                        </a>
+                        <div className="mt-4 inline-flex items-center gap-2 bg-white/20 px-4 py-1 rounded-full text-sm font-medium">
+                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" /> Disponibili Ora
+                        </div>
+                    </motion.div>
 
+                    {/* Email / Quote Card */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center"
+                    >
+                        <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-slate-600">
+                            <Mail className="w-8 h-8" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Preventivi Online</h3>
+                        <p className="text-slate-500 mb-8">Vuoi una stima dettagliata senza impegno? Compila il nostro modulo guidato.</p>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                            <div className="bg-secondary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                                <Clock className="w-6 h-6 text-secondary" />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Orari</h3>
-                            <p className="text-slate-500">
+                        <Link
+                            to="/preventivo"
+                            className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"
+                        >
+                            Richiedi Preventivo <ArrowRight className="w-4 h-4" />
+                        </Link>
+
+                        <a href="mailto:info@termoidraulica.it" className="mt-6 text-slate-500 hover:text-secondary font-medium transition-colors">
+                            o scrivici a info@termoidraulica.it
+                        </a>
+                    </motion.div>
+
+                    {/* Info & Hours Card */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center"
+                    >
+                        <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-slate-600">
+                            <Clock className="w-8 h-8" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Orari & Sede</h3>
+                        <div className="text-slate-500 space-y-4 mb-6">
+                            <p>
+                                <strong className="block text-slate-900 mb-1">Orari Apertura</strong>
                                 Lun - Ven: 08:00 - 18:00<br />
-                                Sabato: 08:00 - 13:00<br />
-                                <span className="text-secondary font-bold">Pronto Intervento H24</span>
+                                Sabato: 08:00 - 13:00
+                            </p>
+                            <p>
+                                <strong className="block text-slate-900 mb-1">Sede Operativa</strong>
+                                Via Roma 123<br />
+                                00100 Roma (RM)
                             </p>
                         </div>
-                    </div>
+                        <div className="mt-auto pt-4 border-t border-slate-100 w-full">
+                            <p className="text-secondary font-bold flex items-center justify-center gap-2">
+                                <Clock className="w-4 h-4" /> Pronto Intervento H24
+                            </p>
+                        </div>
+                    </motion.div>
 
-                    {/* Form */}
-                    <div className="lg:col-span-2 bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
-                        <h2 className="text-2xl font-bold text-slate-900 mb-6">Inviaci un Messaggio</h2>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Nome</label>
-                                    <input className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Cognome</label>
-                                    <input className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" />
-                                </div>
-                            </div>
-                            <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2">Email</label>
-                                <input type="email" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-2">Messaggio</label>
-                                <textarea className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all min-h-[150px]"></textarea>
-                            </div>
-                            <button className="px-8 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 w-full md:w-auto">
-                                <Send className="w-5 h-5" /> Invia Messaggio
-                            </button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
