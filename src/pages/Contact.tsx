@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
