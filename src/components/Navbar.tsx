@@ -38,6 +38,17 @@ const Navbar = () => {
         }
     });
 
+    useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
+            if (e.clientY < 100) {
+                setHidden(false);
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Servizi', path: '/servizi' },
