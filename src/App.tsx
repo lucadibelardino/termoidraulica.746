@@ -8,6 +8,7 @@ import Services from './pages/Services';
 
 import Quote from './pages/Quote';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
             <Route path="/servizi" element={<Services />} />
             <Route path="/preventivo" element={<Quote />} />
             <Route path="/contatti" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
         <Footer />
