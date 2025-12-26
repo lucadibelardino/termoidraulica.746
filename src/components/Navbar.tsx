@@ -70,7 +70,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 text-primary font-bold text-2xl">
                     <ThermometerSun className="w-8 h-8 text-secondary" />
-                    <span>Termo<span className="text-secondary">Idraulica</span></span>
+                    <span>LM <span className="text-secondary">Impianti</span></span>
                 </Link>
 
                 {/* Desktop Menu */}

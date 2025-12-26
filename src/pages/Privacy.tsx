@@ -16,8 +16,8 @@ const Privacy = () => {
 
                     <h3>1. Titolare del Trattamento</h3>
                     <p>
-                        Il titolare del trattamento dei dati è l'azienda <strong>Termoidraulica [Nome Cognome/Ragione Sociale]</strong>.<br />
-                        Per qualsiasi richiesta relativa alla privacy, puoi contattarci all'indirizzo email: <a href="mailto:info@termoidraulica.it">info@termoidraulica.it</a>.
+                        Il titolare del trattamento dei dati è l'azienda <strong>LM Impianti S.r.l.s.</strong>.<br />
+                        Per qualsiasi richiesta relativa alla privacy, puoi contattarci all'indirizzo email: <a href="mailto:info@lmimpianti.it">info@lmimpianti.it</a>.
                     </p>
 
                     <h3>2. Tipologia di Dati Raccolti</h3>
@@ -68,7 +68,7 @@ const Privacy = () => {
                         <li>Revocare il consenso in qualsiasi momento.</li>
                     </ul>
                     <p>
-                        Per esercitare tali diritti, scrivi a <a href="mailto:info@termoidraulica.it">info@termoidraulica.it</a>.
+                        Per esercitare tali diritti, scrivi a <a href="mailto:info@lmimpianti.it">info@lmimpianti.it</a>.
                     </p>
 
 

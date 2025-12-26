@@ -9,7 +9,7 @@ const Footer = () => {
                 <div>
                     <div className="flex items-center gap-2 text-white font-bold text-2xl mb-6">
                         <ThermometerSun className="w-8 h-8 text-secondary" />
-                        <span>Termo<span className="text-secondary">Idraulica</span></span>
+                        <span>LM <span className="text-secondary">Impianti</span></span>
                     </div>
                     <p className="leading-relaxed mb-6">
                         Soluzioni professionali per il tuo comfort domestico. Impianti idraulici, riscaldamento e ristrutturazioni "chiavi in mano".
@@ -62,13 +62,13 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-3">
                             <Mail className="w-5 h-5 text-secondary shrink-0" />
-                            <a href="mailto:info@termoidraulica.it?subject=Richiesta%20Informazioni" className="hover:text-white transition-colors">info@termoidraulica.it</a>
+                            <a href="mailto:info@lmimpianti.it?subject=Richiesta%20Informazioni" className="hover:text-white transition-colors">info@lmimpianti.it</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className="container mx-auto px-4 pt-8 mt-12 border-t border-slate-900 text-center text-sm">
-                <p>&copy; {new Date().getFullYear()} TermoIdraulica. Tutti i diritti riservati.</p>
+                <p>&copy; {new Date().getFullYear()} LM Impianti S.r.l.s. Tutti i diritti riservati.</p>
             </div>
         </footer>
     );
