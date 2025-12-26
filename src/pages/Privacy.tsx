@@ -71,10 +71,7 @@ const Privacy = () => {
                         Per esercitare tali diritti, scrivi a <a href="mailto:info@termoidraulica.it">info@termoidraulica.it</a>.
                     </p>
 
-                    <h3>7. Cookie Policy</h3>
-                    <p>
-                        Questo sito potrebbe utilizzare cookie tecnici necessari al funzionamento e servizi di analisi terze (come Google Analytics) per statistiche anonime sull'uso del sito. Continuando la navigazione, accetti l'uso di tali tecnologie.
-                    </p>
+
                 </div>
             </div>
         </div>
