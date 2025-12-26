@@ -188,7 +188,7 @@ const Quote = () => {
                                         <CheckCircle className="w-4 h-4 text-blue-600" />
                                     </div>
                                     <p className="text-sm text-slate-600 leading-relaxed">
-                                        Per procedere è necessario accettare il trattamento dei dati personali. Inviando la richiesta dichiari di aver letto e compreso la <Link to="/privacy" className="font-bold text-slate-900 underline hover:text-secondary" target="_blank">Privacy Policy</Link>.
+                                        Inviando la richiesta dichiari di aver letto e accettato la <Link to="/privacy" className="font-bold text-slate-900 underline hover:text-secondary" target="_blank">Privacy Policy</Link>.
                                     </p>
                                 </div>
 
