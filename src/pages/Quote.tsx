@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Wrench, Snowflake, Droplets, Home, Camera, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
+import { Wrench, Snowflake, Droplets, Home, ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
@@ -36,23 +36,28 @@ const Quote = () => {
         setIsSubmitting(true);
 
         try {
-            const formData = new FormData();
+            // Use URLSearchParams instead of FormData for better compatibility
+            const params = new URLSearchParams();
 
             // Map fields to Google Form IDs
+            // Ensure category matches exactly what's in the form (if multiple choice)
             const selectedCategoryLabel = categories.find(c => c.id === category)?.label || category || '';
 
-            if (FIELD_IDS.category) formData.append(FIELD_IDS.category, selectedCategoryLabel);
-            if (FIELD_IDS.description) formData.append(FIELD_IDS.description, data.description);
-            if (FIELD_IDS.fullName) formData.append(FIELD_IDS.fullName, data.fullName);
-            if (FIELD_IDS.email) formData.append(FIELD_IDS.email, data.email);
-            if (FIELD_IDS.phone) formData.append(FIELD_IDS.phone, data.phone);
-            if (FIELD_IDS.location) formData.append(FIELD_IDS.location, data.location);
+            if (FIELD_IDS.category) params.append(FIELD_IDS.category, selectedCategoryLabel);
+            if (FIELD_IDS.description) params.append(FIELD_IDS.description, data.description || '');
+            if (FIELD_IDS.fullName) params.append(FIELD_IDS.fullName, data.fullName || '');
+            if (FIELD_IDS.email) params.append(FIELD_IDS.email, data.email || '');
+            if (FIELD_IDS.phone) params.append(FIELD_IDS.phone, data.phone || '');
+            if (FIELD_IDS.location) params.append(FIELD_IDS.location, data.location || '');
 
             // Submit to Google Forms
             await fetch(GOOGLE_FORM_ACTION_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Important for Google Forms
-                body: formData
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: params
             });
 
             // Minimum delay for better UX
@@ -123,14 +128,6 @@ const Quote = () => {
                                         placeholder="Descrivi il problema o il tipo di installazione che ti serve. Includi dettagli come marca/modello se conosciuti."
                                     />
                                     {errors.description && <span className="text-red-500 text-xs">Questo campo è obbligatorio</span>}
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-700">Foto (Opzionale)</label>
-                                    <div className="border-2 border-dashed border-slate-200 rounded-xl p-8 text-center hover:bg-slate-50 transition-colors cursor-pointer">
-                                        <Camera className="w-8 h-8 text-slate-400 mx-auto mb-2" />
-                                        <p className="text-slate-500 text-sm">Clicca per caricare foto del guasto o dell'area di lavoro</p>
-                                    </div>
                                 </div>
 
                                 <div className="flex justify-end pt-4">
