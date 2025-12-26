@@ -183,6 +183,10 @@ const Quote = () => {
                                     </div>
                                 </div>
 
+                                <p className="text-xs text-slate-500 mt-2 text-center md:text-right">
+                                    Inviando la richiesta dichiari di aver letto e accettato la <Link to="/privacy" className="underline hover:text-slate-800" target="_blank">Privacy Policy</Link>.
+                                </p>
+
                                 <div className="flex justify-end pt-4">
                                     <button
                                         type="submit"
