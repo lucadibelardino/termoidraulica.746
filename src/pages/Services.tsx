@@ -10,7 +10,7 @@ const Services = () => {
         {
             title: "Riscaldamento",
             desc: "Dall'installazione di nuove caldaie a condensazione alla manutenzione ordinaria. Garantiamo efficienza energetica e sicurezza.",
-            features: ["Installazione Caldaie", "Lavaggio Impianti", "Pompe di Calore", "Valvole Termostatiche"],
+            features: ["Installazione Caldaie a Condensazione", "Lavaggio Impianti", "Pompe di Calore", "Valvole Termostatiche"],
             img: heatingImg
         },
         {
@@ -22,7 +22,7 @@ const Services = () => {
         {
             title: "Idraulica & Bagno",
             desc: "Interventi idraulici completi, dalla piccola riparazione alla ristrutturazione chiavi in mano del tuo bagno.",
-            features: ["Sostituzione Sanitari", "Box Doccia", "Rubinetteria", "Ricerca Perdite"],
+            features: ["Riparazione Guasti Bagno", "Manutenzione Impianti Idraulici", "Sostituzione Sanitari", "Box Doccia", "Rubinetteria"],
             img: bathroomImg
         }
     ];
