@@ -161,7 +161,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-slate-900 z-0" />
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Hai un'emergenza o serve un preventivo?</h2>
-                    <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Contattaci subito per un sopralluogo gratuito o richiedi un preventivo online.</p>
+                    <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Contattaci subito per un sopralluogo o richiedi un preventivo online.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <a href="tel:+393398321087" className="px-8 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
                             <Phone className="w-5 h-5" /> Chiama Ora
