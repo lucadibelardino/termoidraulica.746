@@ -41,7 +41,7 @@ const Home = () => {
                             transition={{ duration: 0.8, delay: 0.4, ease: "circOut" }}
                             className="flex flex-col sm:flex-row items-center justify-center gap-6"
                         >
-                            <a href="tel:+391234567890" className="w-full sm:w-auto px-10 py-5 bg-secondary text-white rounded-2xl font-bold text-xl hover:bg-secondary/90 transition-all shadow-xl shadow-secondary/30 flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                            <a href="tel:+393398321087" className="w-full sm:w-auto px-10 py-5 bg-secondary text-white rounded-2xl font-bold text-xl hover:bg-secondary/90 transition-all shadow-xl shadow-secondary/30 flex items-center justify-center gap-3 transform hover:-translate-y-1">
                                 Chiama Ora <Phone className="w-6 h-6" />
                             </a>
                             <Link to="/preventivo" className="w-full sm:w-auto px-10 py-5 bg-white/10 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all backdrop-blur-md border border-white/30 transform hover:-translate-y-1">
@@ -163,7 +163,7 @@ const Home = () => {
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Hai un'emergenza o serve un preventivo?</h2>
                     <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">Contattaci subito per un sopralluogo gratuito o richiedi un preventivo online.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
-                        <a href="tel:+391234567890" className="px-8 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
+                        <a href="tel:+393398321087" className="px-8 py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
                             <Phone className="w-5 h-5" /> Chiama Ora
                         </a>
                         <Link to="/preventivo" className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">

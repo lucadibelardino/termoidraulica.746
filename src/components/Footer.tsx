@@ -1,4 +1,4 @@
-import { ThermometerSun, MapPin, Mail, Phone, Facebook, Instagram } from 'lucide-react';
+import { ThermometerSun, MapPin, Mail, Phone, Linkedin, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -15,11 +15,11 @@ const Footer = () => {
                         Soluzioni professionali per il tuo comfort domestico. Impianti idraulici, riscaldamento e ristrutturazioni "chiavi in mano".
                     </p>
                     <div className="flex gap-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-secondary transition-colors text-white">
-                            <Facebook className="w-5 h-5" />
+                        <a href="https://www.linkedin.com/in/marco-laviano-89953232/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-secondary transition-colors text-white">
+                            <Linkedin className="w-5 h-5" />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-secondary transition-colors text-white">
-                            <Instagram className="w-5 h-5" />
+                        <a href="https://wa.me/393398321087" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-secondary transition-colors text-white">
+                            <MessageCircle className="w-5 h-5" />
                         </a>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-3">
                             <Phone className="w-5 h-5 text-secondary shrink-0" />
-                            <a href="tel:+391234567890" className="hover:text-white transition-colors">+39 123 456 7890</a>
+                            <a href="tel:+393398321087" className="hover:text-white transition-colors">+39 339 832 1087</a>
                         </li>
                         <li className="flex items-center gap-3">
                             <Mail className="w-5 h-5 text-secondary shrink-0" />

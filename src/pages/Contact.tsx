@@ -45,8 +45,8 @@ const Contact = () => {
                         </div>
                         <h3 className="text-2xl font-bold mb-2">Urgenze & Telefono</h3>
                         <p className="text-white/80 mb-6">La via più veloce per parlare con noi. Contattaci per informazioni.</p>
-                        <a href="tel:+391234567890" className="text-3xl font-bold hover:scale-105 transition-transform inline-block">
-                            +39 123 456 7890
+                        <a href="tel:+393398321087" className="text-3xl font-bold hover:scale-105 transition-transform inline-block">
+                            +39 339 832 1087
                         </a>
                         <div className="mt-4 inline-flex items-center gap-2 bg-white/20 px-4 py-1 rounded-full text-sm font-medium">
                             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" /> Disponibili
