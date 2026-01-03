@@ -88,7 +88,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <ServiceCard
                             title="Impianti Termici"
-                            items={['Installazione caldaie', 'Manutenzione ordinaria', 'Analisi fumi', 'Pompe di calore']}
+                            items={['Installazione caldaie', 'Manutenzione ordinaria', 'Pompe di calore']}
                             image={heatingImg}
                         />
                         <ServiceCard
