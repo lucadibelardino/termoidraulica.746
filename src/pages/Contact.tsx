@@ -100,8 +100,8 @@ const Contact = () => {
                             </p>
                             <p>
                                 <strong className="block text-slate-900 mb-1">Sede Operativa</strong>
-                                3M6G+R8 Torino<br />
-                                Città Metropolitana di Torino
+                                Via Assietta, 6<br />
+                                10040 Druento (TO)
                             </p>
                         </div>
                         {/* 
