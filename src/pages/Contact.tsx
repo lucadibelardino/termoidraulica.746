@@ -67,7 +67,7 @@ const Contact = () => {
                         <p className="text-slate-500 mb-8">Preferisci scriverci? Inviaci una mail direttamente dal tuo client preferito.</p>
 
                         <a
-                            href="mailto:info@lmimpianti.it"
+                            href="mailto:lm.impianti.web@gmail.com"
                             className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"
                         >
                             <Mail className="w-5 h-5" /> Invia Email
