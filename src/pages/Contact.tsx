@@ -22,7 +22,7 @@ const Contact = () => {
                         transition={{ delay: 0.1 }}
                         className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto"
                     >
-                        Siamo a tua disposizione per preventivi o semplici consigli. Scegli il modo che preferisci per contattarci.
+                        Siamo a tua disposizione a Torino e provincia per preventivi o semplici consigli. Scegli il modo che preferisci per contattarci.
                     </motion.p>
                 </div>
             </div>
@@ -100,8 +100,8 @@ const Contact = () => {
                             </p>
                             <p>
                                 <strong className="block text-slate-900 mb-1">Sede Operativa</strong>
-                                Via Roma 123<br />
-                                00100 Roma (RM)
+                                3M6G+R8 Torino<br />
+                                Città Metropolitana di Torino
                             </p>
                         </div>
                         {/* 

@@ -12,7 +12,7 @@ const Footer = () => {
                         <span>LM <span className="text-secondary">Impianti</span></span>
                     </div>
                     <p className="leading-relaxed mb-6">
-                        Soluzioni professionali per il tuo comfort domestico. Impianti idraulici, riscaldamento e ristrutturazioni "chiavi in mano".
+                        Soluzioni professionali per il tuo comfort domestico. Operiamo a Torino e dintorni. Impianti idraulici, riscaldamento e ristrutturazioni "chiavi in mano".
                     </p>
                     <div className="flex gap-4">
                         <a href="https://www.linkedin.com/in/marco-laviano-89953232/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-secondary transition-colors text-white">
@@ -53,7 +53,7 @@ const Footer = () => {
                     <ul className="flex flex-col gap-4">
                         <li className="flex items-start gap-3">
                             <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                            <span>Via Roma 123,<br />00100 Roma (RM)</span>
+                            <span>3M6G+R8 Torino,<br />Città Metropolitana di Torino</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <Phone className="w-5 h-5 text-secondary shrink-0" />

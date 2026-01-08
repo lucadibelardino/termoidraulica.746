@@ -33,7 +33,7 @@ const Home = () => {
                             transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
                             className="text-xl md:text-2xl text-slate-100 mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-lg font-medium"
                         >
-                            Interventi rapidi, professionalità certificata e soluzioni su misura per il tuo comfort domestico.
+                            Interventi rapidi a Torino e dintorni, professionalità certificata e soluzioni su misura per il tuo comfort domestico.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
